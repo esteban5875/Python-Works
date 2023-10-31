@@ -9,22 +9,22 @@ print("You VS Me ! >:D")
 print("=====================")
 print("                     ")
 
+values = ["Rock", "Paper", "Scissors"]
+
+player = input(str("Enter your play, [Rock, Paper, Scissors] or 'Bye' to exit: "))
+
+invalid = "<Invalid> Input has to be lowercase or uppercase within: [Rock, Paper, Scissors, Bye]"
+
+
+
+def playit():
+    return random.choice(values)
+
+def clock():
+    return random.randint(1, 6)
+
 
 while True:
-
-    values = ["Rock", "Paper", "Scissors"]
-
-    player = input(str("Enter your play, [Rock, Paper, Scissors] or 'Bye' to exit: "))
-
-    invalid = "<Invalid> Input has to be lowercase or uppercase within: [Rock, Paper, Scissors, Bye]"
-
-
-
-    def playit():
-        return random.choice(values)
-
-    def clock():
-        return random.randint(1, 6)
         
 
     result = playit()
