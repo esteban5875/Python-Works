@@ -9,8 +9,11 @@ If the user input "display", the code will print the list of products, prices, a
 If the user input "delete", the code will allow the user to delete an item from the lists.
 If the user input "update", the code will allow the user to update an item from the lists.
 If the user input "reset" the code will reset all lists.
+If the user input "clear" console is cleared.
 If there is a ValueError, the code will print "Oops! An error occurred while processing your request. Please check your input and try again."
 '''
+import os
+
 product_list = []
 price_list = []
 quantity_list = []
@@ -34,7 +37,7 @@ while True:
                 price_list.append(price)
         elif user_action == "display":
             for item, price, quantity, total in zip(product_list, price_list, quantity_list, total_price_list):
-                print(f"Product: {item} x {quantity}...Product Price: {price}...Total Price: {total}")
+                print(f"Product: {item} x {quantity}...Product Price: {price}...Total Price: {round(total, 3)}")
         elif user_action == "delete":
             deletion = str(input("What are you deleting: ")).lower()
             if deletion not in product_list:
@@ -74,6 +77,9 @@ while True:
                 print("Alright")
             else:
                 print(error)
+        elif user_action == "clear":
+            os.system('clear')
+            
 
     except ValueError:
         print(error)
