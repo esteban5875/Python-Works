@@ -49,16 +49,15 @@ while True:
                 elif confirmation.lower() == "no":
                     print("Alright")
         elif user_action == "update":
-                product_selection = str(input("Which ?")).lower()
+                product_selection = str(input("Which: ")).lower()
                 if product_selection not in product_list:
                     print(error)
                 else:
-                    update = str(input("What do you want to update ?")).lower()
                     new_name = str(input("Enter new product: ")).lower()
                     new_quantity = int(input("Enter new product quantity: "))
                     new_price = int(input("Enter new price: "))
-                    index_to_update = product_list.index(update)
-                    product_list.pop(update)
+                    index_to_update = product_list.index(product_selection)
+                    product_list.pop(product_selection)
                     quantity_list.pop(index_to_update)
                     price_list.pop(index_to_update)
                     quantity_list.append(new_quantity)
