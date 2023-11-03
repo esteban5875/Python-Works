@@ -8,6 +8,7 @@ If the user input "add", the code will add the product, price, and quantity ente
 If the user input "display", the code will print the list of products, prices, and quantities.
 If the user input "delete", the code will allow the user to delete an item from the lists.
 If the user input "update", the code will allow the user to update an item from the lists.
+If the user input "reset" the code will reset all lists.
 If there is a ValueError, the code will print "Oops! An error occurred while processing your request. Please check your input and try again."
 '''
 product_list = []
@@ -49,19 +50,30 @@ while True:
                 elif confirmation.lower() == "no":
                     print("Alright")
         elif user_action == "update":
-                product_selection = str(input("Which: ")).lower()
-                if product_selection not in product_list:
-                    print(error)
-                else:
-                    new_name = str(input("Enter new product: ")).lower()
-                    new_quantity = int(input("Enter new product quantity: "))
-                    new_price = int(input("Enter new price: "))
-                    index_to_update = product_list.index(product_selection)
-                    product_list.pop(product_selection)
-                    quantity_list.pop(index_to_update)
-                    price_list.pop(index_to_update)
-                    quantity_list.append(new_quantity)
-                    product_list.append(new_name)
-                    price_list.append(new_price)
+            product_selection = str(input("Which: ")).lower()
+            if product_selection not in product_list:
+                print(error)
+            else:
+                new_name = str(input("Enter new product: ")).lower()
+                new_quantity = int(input("Enter new product quantity: "))
+                new_price = int(input("Enter new price: "))
+                index_to_update = product_list.index(product_selection)
+                product_list.pop(index_to_update)
+                quantity_list.pop(index_to_update)
+                price_list.pop(index_to_update)
+                quantity_list.insert(index_to_update, new_quantity)
+                product_list.insert(index_to_update, new_name)
+                price_list.insert(index_to_update, new_price)
+        elif user_action == "reset":
+            confirmation_ = input("Are you sure ? : ").lower()
+            if confirmation_ == "yes":
+                product_list.clear()
+                price_list.clear()
+                quantity_list.clear()
+            elif confirmation_ == "no":
+                print("Alright")
+            else:
+                print(error)
+
     except ValueError:
         print(error)
