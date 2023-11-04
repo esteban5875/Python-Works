@@ -107,9 +107,12 @@ while True:
             else:
                 print("\nYour OS was not defined, --clear-- only works for Windows or Unix/Linux Systems\n")
         elif user_action == "export":
-            name_file = input("\nName your file --No extensions-- : ")
-            with open(fr"{name_file}.txt", "x") as b:
-                for item, price, quantity, total in zip(product_list, price_list, quantity_list, total_price_list):
-                    b.write(f"\nProduct: {item} x {quantity}...Price: {price}...Revenue: {total}\n")
+            name_file = input("\nName your file --No extensions and Only letters and/or numbers-- : ")
+            if not name_file.isalnum():
+                print("\nInvalid\n")
+            else:
+                with open(fr"{name_file}.txt", "x") as b:
+                    for item, price, quantity, total in zip(product_list, price_list, quantity_list, total_price_list):
+                        b.write(f"\nProduct: {item} x {quantity}...Price: {price}...Revenue: {total}\n")
     except ValueError:
         passing()
