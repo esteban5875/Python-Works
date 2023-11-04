@@ -23,6 +23,8 @@ total_price_list = []
 def passing():
     pass
 
+
+
 while True:
     user_action = str(input(">>> ")).lower()
     os_name = os.name
@@ -107,9 +109,13 @@ while True:
             else:
                 print("Your OS was not defined, --clear-- only works for Windows or Unix/Linux Systems")
         elif user_action == "export":
-            name_file = input("Name your file --No extensions, will be saved to Documents-- : ")
-            with open(fr"C:\Users\\User\Documents\{name_file}.txt", "x") as b:
-                for item, price, quantity, total in zip(product_list, price_list, quantity_list, total_price_list):
+            name_file = input("Name your file and path --No extensions-- : ")
+            with open(fr"{name_file}.txt", "x") as b:
+                for item, price, quantity, total in zip(product_list, price_list, quantity_list, total_price_list):  
                     b.write(f"Product: {item} x {quantity}...Price: {price}...Revenue: {total}")
+        elif user_action == "import":
+            file_option = input("Which file to input: ")
+            
+            
     except ValueError:
         passing()
