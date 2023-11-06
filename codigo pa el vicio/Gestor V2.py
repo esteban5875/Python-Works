@@ -1,6 +1,4 @@
-general_dict = {
-
-}
+general_dict = {}
 
 def add_to_dict():
     list_name = input("Enter name of the section: ")
