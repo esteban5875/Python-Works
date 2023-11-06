@@ -28,13 +28,14 @@ def update_product_price():
     else:
         product_name = input("\nWhat product to update ? : ").lower()
         found = False
-        for product in general_dict[product_section]:
+        for product, index in enumerate(general_dict[product_section]):
             if product[0] == product_name:
                 found = True
         if found == True:
             print("\nPrice updated succesfully\n")
             new_price = float(input("\nEnter new price: "))
-            product = (product[0], new_price, product[2])
+            new_product_price = (product[0], new_price, product[2])
+            general_dict[product_section][index] = product
         else:
             print("\nProduct not found\n")   
 
@@ -45,12 +46,13 @@ def update_product_name():
     else:
         product_name = input("\nWhat product to update ? : ").lower()
         found = False
-        for product in general_dict[product_section]:
+        for index, product in enumerate(general_dict[product_section]):
             if product[0] == product_name:
                 found = True
         if found == True:
             new_name = input("\nEnter new name : ").lower()
             new_product_name = (new_name, product[1], product[2])
+            general_dict[product_section][index] = new_product_name
             print("\nProduct updated succesfully\n")
         else:
             print("\nProduct not found\n")    
