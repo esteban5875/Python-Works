@@ -138,7 +138,7 @@ def delete_products():
 def reset_():
     confirmation = input("Are you sure ? (yes/no) : ").lower()
     if confirmation == "yes":
-        main_dict.clear()
+        general_dict.clear()
         print("\nReset succesful\n")
     elif confirmation == "no":
         print("\nReset cancelled...\n")
