@@ -97,11 +97,7 @@ def clear():
 def display_sections():
     
     for sections in general_dict:
-        def product_count():
-            for sections in product:
-                product_counting = 
-        product_counting = product_count()
-        print(f"\n{sections.capitalize()} x {product_counting} Products\n")
+        print(f"\n{sections.capitalize()}")
 
 def export_():
     file_name = input(r"Name your file --Only txt is allowed for extension: ")
@@ -150,4 +146,5 @@ while True:
     except FileNotFoundError:
         print("File especified not found")    
 
+    
     
