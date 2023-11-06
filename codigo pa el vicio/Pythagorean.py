@@ -5,7 +5,7 @@ def pythagorean_(a, b):
     return math.sqrt(a**2 + b**2)
 
 while True:
-    val1 = input("Do you know the hypothenuse ? --1 if yes, any other key if not: ")
+    val1 = float(input("Do you know the hypothenuse ? --1 if yes, any other key if not: "))
     max_num = sys.float_info
 
     try:
