@@ -64,12 +64,13 @@ def update_product_quantity():
     else:
         product_name = input("\nWhat product to update ? : ").lower()
         found = False
-        for product in general_dict[product_section]:
+        for index, product in enumerate(general_dict[product_section]):
             if product[0] == product_name:
                 found = True
         if found == True:
             new_quantity = int(input("\nEnter new quantity: "))
             quantity_new = (product[0], product[1], new_quantity)
+            general_dict[product_section][index] = quantity_new
         else:
             print("\nProduct not found\n")    
 
@@ -148,7 +149,7 @@ def reset_():
         return                          
                                     
 while True:
-    user_action = input("\n>>> ").lower()
+    user_action = input(">>> ").lower()
     if user_action == "exit":
         break
     try:
