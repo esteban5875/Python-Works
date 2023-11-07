@@ -32,10 +32,10 @@ def update_product_price():
             if product[0] == product_name:
                 found = True
         if found == True:
-            print("\nPrice updated succesfully\n")
             new_price = float(input("\nEnter new price: "))
             new_product_price = (product[0], new_price, product[2])
-            general_dict[product_section][index] = product
+            general_dict[product_section][index] = new_product_price
+            print("\nProduct updated succesfully\n")
         else:
             print("\nProduct not found\n")   
 
@@ -71,6 +71,7 @@ def update_product_quantity():
             new_quantity = int(input("\nEnter new quantity: "))
             quantity_new = (product[0], product[1], new_quantity)
             general_dict[product_section][index] = quantity_new
+            print("\nProduct updated succesfully\n")
         else:
             print("\nProduct not found\n")    
 
