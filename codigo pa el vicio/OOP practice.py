@@ -1,8 +1,8 @@
 class Empleado:
-    def __init__(self, nombre, apellido, salario, bono, proyectos_terminados):
-        self.nombre = nombre
-        self.apellido = apellido
-        self.salario = salario
+    def __init__(self):
+        self.nombre = None
+        self.apellido = None
+        self.salario = 0
         self.proyectos_terminados = 0
         self.bono = 0
     def actualizar_salario(self):
