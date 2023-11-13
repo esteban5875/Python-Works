@@ -181,47 +181,47 @@ class Math:
     def add():
         find_sum = Sum()
         result = find_sum.add()
-        return result
-
+        print(f"\nResult is: {result}\n")
+        
     def substract():
         find_diff = Diff()
         result = find_diff.substract()
-        return result
+        print(f"\nResult is: {result}\n")
 
     def multiply():
         find_product = Product()
         result = find_product.multiply()
-        return result
+        print(f"\nResult is: {result}\n")
 
     def divide():
         find_coefficient = Div()
         result = find_coefficient.divide()
-        return result
+        print(f"\nResult is: {result}\n")
 
     def pow():
         find_expo = Exponent()
         result = find_expo.expo()
-        return result
+        print(f"\nResult is: {result}\n")
 
     def sqroot():
         find_sqrt = sqroot()
         result = find_sqrt.sqr()
-        return result
+        print(f"\nResult is: {result}\n")
 
     def sine():
         find_sine = Sine()
         result = find_sine.find_sine()
-        return result
+        print(f"\nResult is: {result}\n")
 
     def cosine():
         find_cosine = Cosine()
         result = find_cosine.find_cosine()
-        return result
+        print(f"\nResult is: {result}\n")
 
     def tangent():
         find_tangent = Tangent()
         result = find_tangent.find_tangent()
-        return result
+        print(f"\nResult is: {result}\n")
 
 
 while True:
