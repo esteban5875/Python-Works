@@ -193,15 +193,66 @@ class Math:
         result = find_product.multiply()
         return result
 
+    def divide():
+        find_coefficient = Div()
+        result = find_coefficient.divide()
+        return result
+
+    def pow():
+        find_expo = Exponent()
+        result = find_expo.expo()
+        return result
+
+    def sqroot():
+        find_sqrt = sqroot()
+        result = find_sqrt.sqr()
+        return result
+
+    def sine():
+        find_sine = Sine()
+        result = find_sine.find_sine()
+        return result
+
+    def cosine():
+        find_cosine = Cosine()
+        result = find_cosine.find_cosine()
+        return result
+
+    def tangent():
+        find_tangent = Tangent()
+        result = find_tangent.find_tangent()
+        return result
+
 
 while True:
     op = input("Enter operator: ").lower()
-    if op not in ["+", "-", "/", "*", "sin", "cos", "tan"]:
+    if op not in ["+", "-", "/", "*", "sin", "cos", "tan", "sqroot", "expo", "bye"] or op.isspace():
         print("Enter a valid operator")
+    elif op == "bye":
+        break
     else:
-        if op == "+":
-            Math.add()
-        elif op == "-":
-            Math.substract()
-        elif op == "*":
-            Math.multiply()
+        try:
+            if op == "+":
+                Math.add()
+            elif op == "-":
+                Math.substract()
+            elif op == "*":
+                Math.multiply()
+            elif op == "/":
+                Math.divide()
+            elif op == "expo":
+                Math.pow()
+            elif op == "sqroot":
+                Math.sqroot()
+            elif op == "sin":
+                Math.sine()
+            elif op == "cos":
+                Math.cosine()
+            elif op == "tan":
+                Math.tangent()
+        except ValueError as e:
+            e = "Oops ! There seems to be a value error, check your input and try again"
+            print(e)
+        except Exception as e:
+            e = "There seems to be an error, check your inputs and try again"
+            print(e)
