@@ -1,4 +1,4 @@
-import math
+from math import sin, cos, tan, sqrt
 
 class Sine:
     def __init__(self):
@@ -10,7 +10,7 @@ class Sine:
             print(e)
     def find_sine(self):
         try:    
-            self.result = math.sin(self.value)
+            self.result = sin(self.value)
             return round(self.result, 10)
         except Exception as e:
             e = "There seems to be an error, check your inputs and try again"
@@ -26,7 +26,7 @@ class Cosine:
             print(e)
     def find_cosine(self):
         try:    
-            self.result = math.cos(self.value)
+            self.result = cos(self.value)
             return round(self.result, 10)
         except Exception as e:
             e = "There seems to be an error, check your inputs and try again"
@@ -42,7 +42,7 @@ class Tan:
             print(e)
     def find_tangent(self):
         try:
-            self.result = math.tan(self.value)
+            self.result = tan(self.value)
             return round(self.result, 10)
         except Exception as e:
             e = "There seems to be an error, check your inputs and try again"
@@ -149,7 +149,7 @@ class sqroot:
             print(e)
     def sqr(self):
         try:
-            self.result = math.sqrt(self.val)
+            self.result = sqrt(self.val)
             return round(self.result, 10)
         except Exception as e:
             e = "Oops ! There seems to be a value error, check your input and try again"
@@ -177,4 +177,31 @@ class Exponent:
             print(e)
         
 
+class Math:    
+    def add():
+        find_sum = Sum()
+        result = find_sum.add()
+        return result
 
+    def substract():
+        find_diff = Diff()
+        result = find_diff.substract()
+        return result
+
+    def multiply():
+        find_product = Product()
+        result = find_product.multiply()
+        return result
+
+
+while True:
+    op = input("Enter operator: ").lower()
+    if op not in ["+", "-", "/", "*", "sin", "cos", "tan"]:
+        print("Enter a valid operator")
+    else:
+        if op == "+":
+            Math.add()
+        elif op == "-":
+            Math.substract()
+        elif op == "*":
+            Math.multiply()
