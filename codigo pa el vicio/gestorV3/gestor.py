@@ -1,5 +1,10 @@
 from products import Product
-from code_gen import Codes
-class Gestor:
-    def __init__(self):
-        self.inventory = {}
+from products import Product
+
+while True:
+    op = input(">>> ").lower()
+
+    if op == "add section":
+        Product.add_section()
+        
+
