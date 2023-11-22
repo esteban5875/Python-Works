@@ -17,8 +17,7 @@ class Product:
         return price * quantity
 
     def update_revenue(self):
-        self._revenue = self.calculate_revenue(self.price, self.quantity)
-    
+        self._revenue = self.calculate_revenue(self.price, self.quantity)    
     
     def add_section():
         section_name = str(input("\nEnter section name: ")).lower()
