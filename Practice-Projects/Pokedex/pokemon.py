@@ -6,7 +6,6 @@ class pokemon():
         self.species = species
         self.pokemon_xp = pokemon_xp
         self.types = types
-        self.__pokemon_level = 64
         self.HP = HP
         self.defense = defense
         self.speed = speed
