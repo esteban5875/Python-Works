@@ -46,5 +46,3 @@ class Bulbasaur(pokemon):
 #    print(f"Attack Name: {attack.attack_name}")
 #    print(f"Type: {attack.type}")
 #    print(f"Damage: {attack.attack_damage}")
-#    print(f"Level: {attack.level_required}\n")
-
