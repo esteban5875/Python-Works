@@ -1,4 +1,3 @@
-from math import sqrt
 
 class pokemon():
     def __init__(self, pokemon_xp, attacks, species, name, types, HP, defense, speed):
